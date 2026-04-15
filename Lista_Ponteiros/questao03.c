@@ -5,7 +5,7 @@ int main(){
     int i,j;
     int *p,*q;
     p = &i;//Valido, p aponta para i
-    *q = &j;//Invalido, *q é int (lvalue), &j é int* — tipos incompatíveis.
+    *q = &j;//Invalido, *q é int (lvalue), &j é int*(endereço) — tipos incompatíveis.
     p = &*&i;//Valido, pq o &i pega o endereco de i e o * antes dele referencia esse endereco pegando o valor que esta em i, ou seja, p aponta para i
     i = (*&)j;//Invalido, pq *& nao é uma expressão válida
     i = *&j;//Valido, pq o &j pega o endereco de j e o * antes dele referencia esse endereco pegando o valor que esta em j, ou seja, i recebe o valor de j
